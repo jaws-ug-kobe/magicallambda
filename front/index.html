@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Magical(AWS)Labmda</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/magicallambda.css">
+<script type="text/javascript" src="./js/aws-sdk.min.js"></script>
+<script type="text/javascript" src="./js/amazon-cognito.min.js"></script>
+<script type="text/javascript" src="./js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+<script type="text/javascript" src="./js/apiGateway-js-sdk/apigClient.js"></script>
+<script type="text/javascript" src="./js/magicallambda.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <header>
+        <img src="./image/header.png">
+      </header>
+
+      <section class="contents">
+        <div id="game-start" class="btn btn-primary">
+          始める
+        </div>
+
+        <div id="result-cpu-answer" class="contents">
+        </div>
+
+        <div id="result-get-question" class="contents">
+        </div>
+
+        <div id="post-answer" class="contents">
+          <input type="hidden" id="question-target">
+          <input id="text-answer" type="text" class="form-control">
+          <div id="button-post-answer" class="btn btn-success contents">送信</div>
+        </div>
+        <audio id="banana-sound" preload="auto">
+          <source src="./sound/banana.mp3" type="audio/mp3">
+        </audio>
+      </section>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
