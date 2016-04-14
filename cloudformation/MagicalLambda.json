@@ -1,76 +1,76 @@
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Metadata": {
-    "AWS::CloudFormation::Designer": {
-      "b651a2ea-5a71-40df-baf1-6a86db55f2f6": {
-        "size": {
-          "width": 60,
-          "height": 60
-        },
-        "position": {
-          "x": 60,
-          "y": 40
-        },
-        "z": 0
-      }
-    }
-  },
-  "Resources": {
-    "DDBTKT49": {
-      "Type": "AWS::DynamoDB::Table",
-      "Properties": {
-        "AttributeDefinitions": [
-          {
-            "AttributeName": "key",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "word",
-            "AttributeType": "S"
-          }
-        ],
-        "GlobalSecondaryIndexes": [
-          {
-            "IndexName": "word-index",
-            "KeySchema": [
-							{
-								"AttributeName": "word",
-							"KeyType": "HASH"
-           	  }			
-						],
-            "Projection":	{
-							"NonKeyAttributes" : [],
-							"ProjectionType" : "ALL"
+	{
+		"AWSTemplateFormatVersion": "2010-09-09",
+		"Metadata": {
+			"AWS::CloudFormation::Designer": {
+				"b651a2ea-5a71-40df-baf1-6a86db55f2f6": {
+					"size": {
+						"width": 60,
+						"height": 60
+					},
+					"position": {
+						"x": 60,
+						"y": 40
+					},
+					"z": 0
+				}
+			}
+		},
+		"Resources": {
+			"DDBTKT49": {
+				"Type": "AWS::DynamoDB::Table",
+				"Properties": {
+					"AttributeDefinitions": [
+						{
+							"AttributeName": "key",
+							"AttributeType": "S"
 						},
-            "ProvisionedThroughput": {
-              "ReadCapacityUnits": 5,
-              "WriteCapacityUnits": 5
-            }
-          }
-        ],
-        "KeySchema": [
-          {
-            "AttributeName": "key",
-            "KeyType": "HASH"
-          },
-          {
-            "AttributeName": "word",
-            "KeyType": "RANGE"
-          }
-        ],
-        "ProvisionedThroughput":
-          {
-            "ReadCapacityUnits": 5,
-            "WriteCapacityUnits": 5
-          }
-        ,
-        "TableName": "MagicalLambda"
-      },
-      "Metadata": {
-        "AWS::CloudFormation::Designer": {
-          "id": "b651a2ea-5a71-40df-baf1-6a86db55f2f6"
-        }
-      }
-    }
-  }
-}
+						{
+							"AttributeName": "word",
+							"AttributeType": "S"
+						}
+					],
+					"GlobalSecondaryIndexes": [
+						{
+							"IndexName": "word-index",
+							"KeySchema": [
+								{
+									"AttributeName": "word",
+								"KeyType": "HASH"
+								}			
+							],
+							"Projection":	{
+								"NonKeyAttributes" : [],
+								"ProjectionType" : "ALL"
+							},
+							"ProvisionedThroughput": {
+								"ReadCapacityUnits": 5,
+								"WriteCapacityUnits": 5
+							}
+						}
+					],
+					"KeySchema": [
+						{
+							"AttributeName": "key",
+							"KeyType": "HASH"
+						},
+						{
+							"AttributeName": "word",
+							"KeyType": "RANGE"
+						}
+					],
+					"ProvisionedThroughput":
+						{
+							"ReadCapacityUnits": 5,
+							"WriteCapacityUnits": 5
+						}
+					,
+					"TableName": "MagicalLambda"
+				},
+				"Metadata": {
+					"AWS::CloudFormation::Designer": {
+						"id": "b651a2ea-5a71-40df-baf1-6a86db55f2f6"
+					}
+				}
+			}
+		}
+	}
