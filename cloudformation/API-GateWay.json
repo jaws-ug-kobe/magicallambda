@@ -1,0 +1,104 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "eba2328e-c800-4dba-a47e-2baef9347c29": {
+        "size": {
+          "width": 870,
+          "height": 370
+        },
+        "position": {
+          "x": 70,
+          "y": 60
+        },
+        "z": 0,
+        "embeds": [
+          "492ef243-8a36-4a2d-b158-f515e4d57f8b",
+          "63281c7f-dcce-44b5-a158-42fbe0ca0855"
+        ]
+      },
+      "492ef243-8a36-4a2d-b158-f515e4d57f8b": {
+        "size": {
+          "width": 140,
+          "height": 126
+        },
+        "position": {
+          "x": 170,
+          "y": 130
+        },
+        "z": 1,
+        "parent": "eba2328e-c800-4dba-a47e-2baef9347c29",
+        "embeds": [],
+        "isassociatedwith": [
+          "eba2328e-c800-4dba-a47e-2baef9347c29"
+        ]
+      },
+      "63281c7f-dcce-44b5-a158-42fbe0ca0855": {
+        "size": {
+          "width": 140,
+          "height": 140
+        },
+        "position": {
+          "x": 340,
+          "y": 130
+        },
+        "z": 1,
+        "parent": "eba2328e-c800-4dba-a47e-2baef9347c29"
+      }
+    }
+  },
+  "Resources": {
+    "AGRA1YDEU": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "MagicalLambda",
+        "Description": "Magical Lambda For JAWS-UG KOBE"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "eba2328e-c800-4dba-a47e-2baef9347c29"
+        }
+      }
+    },
+    "AGR3QJNF": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "AGRA1YDEU"
+        },
+        "ParentId": {
+          "Fn::GetAtt": [
+            "AGRA1YDEU",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "question"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "492ef243-8a36-4a2d-b158-f515e4d57f8b"
+        }
+      }
+    },
+    "AGRFDL8": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "AGRA1YDEU"
+        },
+        "ParentId": {
+          "Fn::GetAtt": [
+            "AGRA1YDEU",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "answer"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "63281c7f-dcce-44b5-a158-42fbe0ca0855"
+        }
+      }
+    }
+  }
+}
